@@ -21,8 +21,11 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
-    - run: mkdir staging && cp target/*.jar staging
+      run: mvn -B compile --file pom.xml
+    - name: Test with Maven
+      run: mvn test
+    - name: Build Jar file
+      run: mkdir staging && cp target/*.jar staging
     - uses: actions/upload-artifact@v1
       with:
         name: Package
