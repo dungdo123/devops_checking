@@ -25,7 +25,7 @@ class ComputeTest {
     void divide() {
         assertEquals(2, compute.divide(4, 2));
         Exception exception = assertThrows(IllegalArgumentException.class, new Executable() {
-            public void execute() throws Throwable {
+            public void execute()  {
                 compute.divide(1, 0);
             }
         });
