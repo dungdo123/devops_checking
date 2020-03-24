@@ -3,6 +3,8 @@ package testci;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ComputeTest {
+
+
     Compute compute = new Compute();
 
     @org.junit.jupiter.api.Test
