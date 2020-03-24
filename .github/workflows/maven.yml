@@ -3,13 +3,13 @@
 
 name: Java CI with Maven # Tên của acttion buil
 
-on: //xảy ra sự kiện để kích hoặc việc build
+on: #xảy ra sự kiện để kích hoặc việc build
   push: 
     branches: [ master ]  # Khi code được push bên branch master
   pull_request:
     branches: [ master ]  # Khi có pull request ở branh master
 
-jobs: // Những công việc sẽ được làm
+jobs: # Những công việc sẽ được làm
   build:
 
     runs-on: ubuntu-latest   # Đây là môi trường, có thể chạy trên container này luôn hoặc docker
