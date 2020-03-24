@@ -1,5 +1,7 @@
 package testci;
 
+import org.junit.jupiter.api.function.Executable;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ComputeTest {
@@ -22,8 +24,10 @@ class ComputeTest {
     @org.junit.jupiter.api.Test
     void divide() {
         assertEquals(2, compute.divide(4, 2));
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            compute.divide(1, 0);
+        Exception exception = assertThrows(IllegalArgumentException.class, new Executable() {
+            public void execute() throws Throwable {
+                compute.divide(1, 0);
+            }
         });
         String expectedMessage = "b must not be zero";
         String actualMessage = exception.getMessage();
