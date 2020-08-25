@@ -7,5 +7,3 @@ steps:
   commands:
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
   - mvn test -B
-  files:
-      - target/*.jar
